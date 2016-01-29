@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>filter</title>
+    <script src="jquery-2.2.0.min.js" type="text/javascript"></script>
+    <link href="filter.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+    <div id="image-groups">
+        <img src="image.jpg" id="origin-image"/>
+        <img src="image.jpg" id="filter-image"/>
+        <div class="clear"></div>
+
+        <center>
+            <h1 id="filter-name">grayscale</h1>
+            <p id="code">filter:grayscale(1)</p>
+            <p id="default">default: 100%</p>
+        </center>
+
+        <a href="javascript:changeFilter('grayscale')" class="button" id="grayscale">grayscale</a>
+        <a href="javascript:changeFilter('sepia')" class="button" id="sepia">sepia</a>
+        <a href="javascript:changeFilter('saturate')" class="button" id="saturate">saturate</a>
+        <a href="javascript:changeFilter('hue-rotate')" class="button" id="hue-rotate">hue-rotate</a>
+        <a href="javascript:changeFilter('invert')" class="button" id="invert">invert</a>
+        <a href="javascript:changeFilter('opacity')" class="button" id="opacity">opacity</a>
+        <a href="javascript:changeFilter('brightness')" class="button" id="brightness">brightness</a>
+        <a href="javascript:changeFilter('contrast')" class="button" id="contrast">contrast</a>
+        <a href="javascript:changeFilter('blur')" class="button" id="blur">blur</a>
+        <a href="javascript:changeFilter('drop-shadow')" class="button" id="drop-shadow">drop-shadow</a>
+    </div>
+
+    <script src = "filter.js"></script>
+</body>
+</html>

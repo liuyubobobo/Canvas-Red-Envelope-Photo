@@ -1,0 +1,59 @@
+#image-groups{
+    margin: 0 auto;
+    width: 1700px;
+}
+
+#origin-image{
+    display: block;
+    float: left;
+}
+
+#filter-image{
+    display: block;
+    float: right;
+}
+
+.clear{
+    clear:both;
+}
+
+#filter-name{
+    display: block;
+    font-size:50px;
+    font-weight:bold;
+    margin-top:50px;
+    margin-bottom: 20px;
+    font-family: Arial;
+}
+
+#code{
+    font-size:30px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight:bold;
+    color:#333;
+}
+
+#default{
+    font-size:30px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight:bold;
+    color:#333;
+    margin-bottom: 60px;
+}
+
+.button{
+    display:block;
+    color:white;
+    background-color: #058;
+    float:left;
+    width:114px;
+    height:40px;
+    text-align: center;
+    margin-left:50px;
+    text-decoration: none;
+    line-height: 40px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.button:hover{
+    background-color: #014;
+}
