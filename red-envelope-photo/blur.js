@@ -12,6 +12,8 @@ var radius = 50
 var clippingRegion = {x: -1 , y: -1 , r: radius}
 var leftMargin = 0 , topMargin = 0
 
+var theAnimation = null
+
 image.src = "image.jpg"
 image.onload = function(e){
 
@@ -62,22 +64,28 @@ function draw( image , clippingRegion ){
 
 function reset(){
 
+    if( theAnimation != null ){
+        clearInterval(theAnimation)
+        theAnimation = null
+    }
     initCanvas()
 }
 
 function show(){
 
-    var theAnimation = setInterval(
-        function(){
-            console.log("animation")
-            clippingRegion.r += 20
-            if( clippingRegion.r > 2*Math.max(canvas.width,canvas.height) ){
-                clearInterval(theAnimation)
-            }
-            draw( image , clippingRegion )
-        },
-        30
-    )
+    if(theAnimation == null){
+        theAnimation = setInterval(
+            function(){
+                console.log("animation")
+                clippingRegion.r += 20
+                if( clippingRegion.r > 2*Math.max(canvas.width,canvas.height) ){
+                    clearInterval(theAnimation)
+                }
+                draw( image , clippingRegion )
+            },
+            30
+        )
+    }
 }
 
 canvas.addEventListener("touchstart",function(e){
